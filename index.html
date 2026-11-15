@@ -128,6 +128,14 @@ nav.top li a.active::after{transform:scaleX(1)}
 @keyframes fadeBlur{from{opacity:0;transform:translateY(18px);filter:blur(12px)}to{opacity:1;transform:none;filter:none}}
 @keyframes drip{0%{top:-40%}100%{top:110%}}
 
+.affil{margin:2.2rem 0 0;font-size:.82rem;color:var(--faint);letter-spacing:.02em;display:flex;flex-wrap:wrap;gap:.35rem .7rem;align-items:baseline;
+  opacity:0;animation:fadeBlur 1.5s .95s var(--ease) forwards}
+.affil a{color:var(--fg);font-weight:500;background:linear-gradient(var(--accent),var(--accent)) 0 100%/0 1px no-repeat;transition:background-size .6s var(--ease)}
+.affil a:hover{background-size:100% 1px}
+.affil span{color:var(--faint)}
+.with{display:inline-block;margin-left:.5rem;font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+  border:1px solid var(--line);border-radius:999px;padding:.08rem .55rem;vertical-align:1px}
+
 /* sections */
 main{max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
 section{padding:clamp(80px,11vw,130px) 0;display:grid;grid-template-columns:minmax(160px,230px) 1fr;gap:clamp(24px,5vw,72px);position:relative}
@@ -239,7 +247,7 @@ footer{max-width:1120px;margin:0 auto;padding:40px clamp(20px,5vw,48px) 56px;dis
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
-  .hero h1 .line span,.hero .lede,.hero .cta,.eyebrow,.portrait{transform:none;opacity:1;filter:none}
+  .hero h1 .line span,.hero .lede,.hero .cta,.affil,.eyebrow,.portrait{transform:none;opacity:1;filter:none}
   .rv{opacity:1;transform:none;filter:none}
 }
 </style>
@@ -273,6 +281,7 @@ footer{max-width:1120px;margin:0 auto;padding:40px clamp(20px,5vw,48px) 56px;dis
       <a class="btn" href="https://www.linkedin.com/in/alismaeili69">LinkedIn</a>
       <a class="btn" href="https://orcid.org/0000-0002-5740-3885">ORCID</a>
     </div>
+    <p class="affil">Affiliations <a href="https://www.chalmers.se/en/persons/esmaeeli/">Chalmers University of Technology</a><span>·</span><a href="https://valys.se">Valys</a></p>
   </div>
   <figure class="portrait" style="margin:0">
     <div class="glow"></div>
@@ -321,12 +330,12 @@ footer{max-width:1120px;margin:0 auto;padding:40px clamp(20px,5vw,48px) 56px;dis
   <div class="label rv"><div class="num">03</div><h2>Research</h2></div>
   <div class="cards">
     <article class="card glass rv">
-      <div class="k">Licentiate thesis · 2026</div>
+      <div class="k">Licentiate thesis · 2026<span class="with">With Valys</span></div>
       <h3>Proactive coagulant dosing</h3>
       <p>Climate change, hydrological variability and land use are making raw water less predictable than the plants treating it were designed for. I evaluated ARIX, an optical index of dissolved organic matter aromaticity that sensors can measure in real time, across a 240-km river system over a year. Reaching 70% DOC removal took about 2.5× more coagulant for low-ARIX water (~0.6) than high-ARIX water (~0.8). Even small shifts in organic matter quality change coagulant demand, which supports real-time dosing that follows the source water.</p>
     </article>
     <article class="card glass rv" style="--d:.08s">
-      <div class="k">Since 2022 · Chalmers</div>
+      <div class="k">Since 2022 · Chalmers<span class="with">With Valys</span></div>
       <h3>GAC filters for PFAS removal</h3>
       <p>Part of the team behind a fluorescence-based sensor for granular activated carbon filters, from early design through testing to installation. Since March 2026 it has been running at a drinking water treatment plant, monitoring 10 carbon filters and their PFAS removal online.</p>
     </article>
@@ -374,6 +383,8 @@ footer{max-width:1120px;margin:0 auto;padding:40px clamp(20px,5vw,48px) 56px;dis
     <ul class="tl" id="tl1"><span class="fill"></span>
       <li class="rv"><div class="when">2023 — present</div><h3>PhD Student, Water Engineering</h3><div class="org">Chalmers University of Technology · Gothenburg</div>
         <p>Licentiate of Engineering, 2026.</p></li>
+      <li class="rv"><div class="when">2023 — present</div><h3>PhD Candidate, Science and R&amp;D</h3><div class="org"><a href="https://valys.se">Valys</a> · Gothenburg</div>
+        <p>Chalmers spin-off building optical sensors that read dissolved contamination and treatability in water continuously.</p></li>
       <li class="rv"><div class="when">2022 — 2023</div><h3>Project Assistant</h3><div class="org">Chalmers University of Technology · Gothenburg</div></li>
       <li class="rv"><div class="when">2019 — 2022</div><h3>Researcher</h3><div class="org">UNESCO Chair on Water Reuse, University of Tehran</div>
         <p>Research on water reuse and wastewater treatment; led an international team reviewing pulp and paper wastewater treatment.</p></li>
