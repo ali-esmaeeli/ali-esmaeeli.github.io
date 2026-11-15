@@ -194,6 +194,16 @@ section::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;
 .card h3{font:400 1.35rem/1.3 var(--serif);margin:.5rem 0 .55rem;letter-spacing:-.01em;position:relative}
 .card p{margin:0;color:var(--muted);font-size:.97rem;position:relative}
 
+.dreem figure{margin:-.4rem -.4rem 1.3rem;position:relative;border-radius:16px;overflow:hidden}
+.dreem img{display:block;width:100%;height:auto;transition:transform 1.2s var(--ease),filter 1.2s var(--ease)}
+.dreem:hover img{transform:scale(1.03)}
+.dreem figcaption{position:absolute;right:10px;top:10px;font-size:.7rem;color:var(--muted);padding:.2rem .6rem;border-radius:999px;
+  background:var(--glass);border:1px solid var(--glass-brd);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.card .more{display:inline-block;margin-top:.9rem;font-size:.86rem;color:var(--accent);position:relative;
+  background:linear-gradient(var(--accent),var(--accent)) 0 100%/0 1px no-repeat;transition:background-size .6s var(--ease)}
+.card .more:hover{background-size:100% 1px}
+@media (prefers-color-scheme:dark){ .dreem img{filter:brightness(.9) contrast(1.05)} }
+
 /* publications */
 .pubs{list-style:none;margin:0;padding:0}
 .pubs li{display:grid;grid-template-columns:64px 1fr;gap:16px;padding:1.4rem 0;border-bottom:1px solid var(--line)}
@@ -350,6 +360,14 @@ footer{max-width:1120px;margin:0 auto;padding:40px clamp(20px,5vw,48px) 56px;dis
       <h3>GAC filters for PFAS removal</h3>
       <p>Part of the team behind a fluorescence-based sensor for granular activated carbon filters, from early design through testing to installation. Since March 2026 it has been running at a drinking water treatment plant, monitoring 10 carbon filters and their PFAS removal online.</p>
     </article>
+    <article class="card glass rv dreem" style="--d:.12s">
+      <figure><img src="eem.jpg" alt="Illustrative fluorescence excitation–emission matrix (EEM) of dissolved organic matter" width="1200" height="840" loading="lazy">
+        <figcaption>Illustrative excitation–emission matrix</figcaption></figure>
+      <div class="k">Since 2024 · Open source</div>
+      <h3>drEEM toolbox</h3>
+      <p>Contributor to drEEM, the open-source MATLAB toolbox for analysing fluorescence (EEM) data of dissolved organic matter, linked to the OpenFluor spectral database. Part of the team behind drEEM 2.</p>
+      <a class="more" href="https://dreem.openfluor.org/">dreem.openfluor.org ↗</a>
+    </article>
     <article class="card glass rv" style="--d:.16s">
       <div class="k">MSc thesis · 2020 – 2022 · University of Tehran</div>
       <h3>Closed-loop water in pulp &amp; paper</h3>
@@ -402,6 +420,8 @@ footer{max-width:1120px;margin:0 auto;padding:40px clamp(20px,5vw,48px) 56px;dis
         <p>Licentiate of Engineering, 2026.</p></li>
       <li class="rv"><div class="when">2023 — present</div><h3>PhD Candidate, Science and R&amp;D</h3><div class="org"><a href="https://valys.se">Valys</a> · Gothenburg</div>
         <p>Chalmers spin-off building optical sensors that read dissolved contamination and treatability in water continuously.</p></li>
+      <li class="rv"><div class="when">2024 — present</div><h3>Contributor, drEEM toolbox</h3><div class="org"><a href="https://dreem.openfluor.org/">drEEM · OpenFluor</a></div>
+        <p>Open-source MATLAB toolbox for fluorescence analysis of dissolved organic matter; part of the team behind drEEM 2.</p></li>
       <li class="rv"><div class="when">2022 — 2023</div><h3>Project Assistant</h3><div class="org">Chalmers University of Technology · Gothenburg</div></li>
       <li class="rv"><div class="when">2019 — 2022</div><h3>Researcher</h3><div class="org">UNESCO Chair on Water Reuse, University of Tehran</div>
         <p>Research on water reuse and wastewater treatment; led an international team reviewing pulp and paper wastewater treatment.</p></li>
